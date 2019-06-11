@@ -90,7 +90,23 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+//Create comma seperated string of email addresses for runners from 'Challange 3'
+let largeShirtsEmailString = largeShirts.reduce((string, runner) => string + runner.email + ",", "");
+
+console.log(largeShirtsEmailString);
 
 // Problem 2
+//Create an array for details of runners with donation more than 200 and log the result
+let donorsOverTwoHundred = runners.filter(runner => runner.donation > 200);
+
+console.log(donorsOverTwoHundred);
 
 // Problem 3
+//Create an array of runners company names, display them sorted alphabetically while removing duplicates
+
+let companies = [];
+runners.forEach(function(runner) {
+    companies.push(runner.company_name);
+});
+
+console.log(new Set(companies.sort()));
