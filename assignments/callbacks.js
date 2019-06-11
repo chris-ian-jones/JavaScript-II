@@ -30,24 +30,36 @@ function getLength(arr, cb) {
   return cb(arr.length);
 }
 
+// Function invocation 
 getLength(items, function(length) {
   console.log(length);
 });
 
+//----------//
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
   return cb(arr[arr.length - 1]);
 }
 
+// Function invocation 
 last(items, function(lastItem) {
   console.log(lastItem);
 });
 
+//----------//
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return cb(x + y);
 }
+
+// Function invocation 
+sumNums(10, 2, function(sumNumsAnswer) {
+  console.log(sumNumsAnswer);
+});
+
+//----------//
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
