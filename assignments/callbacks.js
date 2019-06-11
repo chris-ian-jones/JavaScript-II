@@ -67,7 +67,7 @@ function multiplyNums(x, y, cb) {
 }
 
 // Function invocation 
-multiplyNums(2, 5, function (multiplyNumsAnswer) {
+multiplyNums(2, 5, function(multiplyNumsAnswer) {
   console.log(multiplyNumsAnswer);
 });
 
@@ -76,7 +76,21 @@ multiplyNums(2, 5, function (multiplyNumsAnswer) {
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-}
+  let presentCheck = false;
+  for (let i = 0; i < list.length; i++) {
+    if (list[i] === item) {
+      presentCheck = true;
+    }
+  }
+  return cb(presentCheck);
+};
+
+// Function invocation 
+contains("Notebook", items, function(isItemPresent) {
+  console.log(isItemPresent);
+});
+
+//----------//
 
 /* STRETCH PROBLEM */
 
