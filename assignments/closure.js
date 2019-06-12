@@ -1,6 +1,20 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+const multiplyBy = function(passed){
+
+  const multiply = function(inner){
+    return passed * inner;
+  };
+  return multiply;
+};
+
+const timesThree = multiplyBy(3);
+const timesFour = multiplyBy(4);
+
+//closure is a function with preserved data, in this case when we log the timesThree function, it already has a passed value inside it: 3.
+console.log(timesThree(10));
+console.log(timesFour(100));
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
